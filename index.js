@@ -28,11 +28,15 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+  in counter 1 the counter will reset to 0 when you run the function. In counter 2 it wont.
   
   2. Which of the two uses a closure? How can you tell?
+  Counter 1, because it is invoking "let count" from a return statement in the function nested inside the counterMaker function.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
-     counter2 be better?  
+     counter2 be better? 
+     
+     Counter 1 whenever you need to restart the count, like a competition where each participant has their own count. Counter 2 when you don't want the counting to restart, like to keep track of something along time like the number of cyclists that have ever passed through a certain bridge maybe.
 */
 
 // counter1 code
@@ -62,8 +66,8 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(){
+  return Math.floor(Math.random() * (2 - 0 + 1))
 }
 
 
@@ -81,8 +85,21 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
+function finalScore(inning, toBePlayed){
+  const finalScore = [{
+    Home: 0,
+    Away: 0
+  }]
+  let homeScore = 0;
+  let awayScore = 0;
+  
+  for (let i = 0; i < toBePlayed; i++) {
+    const currentScore = 
+      homeScore = homeScore + inning()
+      awayScore = awayScore + inning()
+      finalScore.push(Home: homescore, awayScore.Away)
+    }
+    return finalScore;
 }
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
