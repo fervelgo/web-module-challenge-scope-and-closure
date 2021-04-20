@@ -86,20 +86,19 @@ Use the finalScore function below to do the following:
 */ 
 
 function finalScore(inning, toBePlayed){
-  const finalScore = [{
-    Home: 0,
-    Away: 0
-  }]
   let homeScore = 0;
   let awayScore = 0;
-  
   for (let i = 0; i < toBePlayed; i++) {
-    const currentScore = 
       homeScore = homeScore + inning()
       awayScore = awayScore + inning()
-      finalScore.push(Home: homescore, awayScore.Away)
     }
-    return finalScore;
+    const endScore = {
+      Home: homeScore,
+      Away: awayScore
+    }
+
+    return endScore
+   
 }
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
